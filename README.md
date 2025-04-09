@@ -20,12 +20,15 @@ A backend-only RESTful API for task management, built using Node.js, Express, an
 
 ---
 
+## Postman Collection
+
 The Postman collection file is included in this repository. You can download it to test all the API endpoints.
+
+---
 
 ## 📦 Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/task-manager-api.git
-cd task-manager-api
+git clone https://github.com/namitmalasi/Task-API.git
 npm install
 ```
