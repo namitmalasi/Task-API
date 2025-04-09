@@ -9,6 +9,10 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Task API is running...");
+});
+
 // routes
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
