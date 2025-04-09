@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "be10eac0-c7f5-46cf-affa-7b4dc9039efe",
+		"name": "task-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5425596"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Namit\",\r\n  \"email\": \"namit@example.com\",\r\n  \"password\": \"secure123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"namit@example.com\",\r\n  \"password\": \"secure123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y2MmE1ZTU0N2Q5ZDdlMjcyZDJhMTMiLCJpYXQiOjE3NDQxOTU5MzEsImV4cCI6MTc0NDE5OTUzMX0.RUdlreERkqQ986GBVm56X15LcGy5NOoqY0rbNnvDMP0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Buy Groceries 123\",\r\n  \"description\": \"Milk, Bread, Eggs, Meat\",\r\n  \"status\": \"in-progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y2MmE1ZTU0N2Q5ZDdlMjcyZDJhMTMiLCJpYXQiOjE3NDQxOTU5MzEsImV4cCI6MTc0NDE5OTUzMX0.RUdlreERkqQ986GBVm56X15LcGy5NOoqY0rbNnvDMP0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y2MmE1ZTU0N2Q5ZDdlMjcyZDJhMTMiLCJpYXQiOjE3NDQxOTU5MzEsImV4cCI6MTc0NDE5OTUzMX0.RUdlreERkqQ986GBVm56X15LcGy5NOoqY0rbNnvDMP0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated title\",\r\n  \"status\": \"in-progress\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/67f651bdbd358501cc0a6da6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"67f651bdbd358501cc0a6da6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2Y2MmE1ZTU0N2Q5ZDdlMjcyZDJhMTMiLCJpYXQiOjE3NDQxOTU5MzEsImV4cCI6MTc0NDE5OTUzMX0.RUdlreERkqQ986GBVm56X15LcGy5NOoqY0rbNnvDMP0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/67f652e7bd358501cc0a6dab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"67f652e7bd358501cc0a6dab"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
